@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NDD.MicroServico.Base.Negocio" Version="2.0.0.1" />
+		<PackageReference Include="NDD.Space.Base.Database" Version="3.0.0.1" />
+		<PackageReference Include="NDD.Space.Base.Domain" Version="3.0.0.4" />
+  </ItemGroup>
+
+</Project>

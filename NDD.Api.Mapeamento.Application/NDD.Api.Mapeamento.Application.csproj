@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+		<PackageReference Include="AutoMapper" Version="13.0.1" />
+		<PackageReference Include="FluentValidation.AspNetCore" Version="8.5.0" />
+		<PackageReference Include="MediatR" Version="11.0.0" />
+		<PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.9" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="2.2.0" />
+		<PackageReference Include="NDD.MicroServico.Base" Version="2.0.0.3" />
+		<PackageReference Include="NDD.MicroServico.Base.Cache" Version="2.0.0.5" />
+		<PackageReference Include="NDD.MicroServico.Base.Filas" Version="2.0.0.7" />
+		<PackageReference Include="NDD.Space.Base.Domain" Version="3.0.0.4" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NDD.Api.Mapeamento.Base\NDD.Api.Mapeamento.Base.csproj" />
+    <ProjectReference Include="..\NDD.Api.Mapeamento.Domain\NDD.Api.Mapeamento.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,96 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-NDD.Api.Mapeamento.API-b5ab71bf-67c5-4069-868f-e437b30595cd</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <OutputType>Exe</OutputType>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="appsettings.json" />
+    <Content Remove="appsettings.Release.json" />
+    <Content Remove="Desenvolvimento\appsettings_Filipe.json" />
+    <Content Remove="Serilogfile.json" />
+    <Content Remove="Serilogfile.Release.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="appsettings.Release.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Desenvolvimento\appsettings_Filipe.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Serilogfile.Release.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Serilogfile.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+		<PackageReference Include="AutoMapper" Version="13.0.1" />
+		<PackageReference Include="FluentValidation.AspNetCore" Version="8.5.0" />
+		<PackageReference Include="MediatR" Version="11.0.0" />
+		<PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.18.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.7" />
+		<PackageReference Include="Microsoft.AspNetCore.HttpOverrides" Version="2.2.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.16" />
+		<PackageReference Include="NDD.MicroServico.Base" Version="2.0.0.3" />
+		<PackageReference Include="NDD.MicroServico.Base.Cache" Version="2.0.0.5" />
+		<PackageReference Include="NDD.MicroServico.Base.Filas" Version="2.0.0.7" />
+		<PackageReference Include="NDD.MicroServico.Base.Log4Net" Version="1.0.0.49" />
+		<PackageReference Include="NDD.MicroServico.Base.ProvedorServico.MSDI" Version="2.0.0.1" />
+		<PackageReference Include="NDD.MicroServico.Base.Serilog" Version="2.0.0.5" />
+		<PackageReference Include="NDD.Microservico.Base.Transporte.RabbitMQ" Version="2.0.0.7" />
+		<PackageReference Include="NDD.MicroServico.Base.Transporte.Sql" Version="2.0.0.1" />
+		<PackageReference Include="NDD.Space.Base.CORS" Version="3.0.0.1" />
+		<PackageReference Include="NDD.Space.Base.Domain" Version="3.0.0.4" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="NJsonSchema" Version="10.7.2" />
+		<PackageReference Include="NServiceBus.Log4Net" Version="3.0.0" />
+		<PackageReference Include="NServiceBus.Persistence.Sql" Version="6.6.5" />
+		<PackageReference Include="NServiceBus.SimpleInjector" Version="3.0.5" />
+		<PackageReference Include="NServiceBus.SqlServer" Version="6.3.4" />
+		<PackageReference Include="SimpleInjector.Integration.AspNetCore.Mvc.Core" Version="4.10.3" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+		<PackageReference Include="NDD.Space.Base.Throttling" Version="1.0.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NDD.Api.Mapeamento.Application\NDD.Api.Mapeamento.Application.csproj" />
+    <ProjectReference Include="..\NDD.Api.Mapeamento.Base\NDD.Api.Mapeamento.Base.csproj" />
+    <ProjectReference Include="..\NDD.Api.Mapeamento.Domain\NDD.Api.Mapeamento.Domain.csproj" />
+    <ProjectReference Include="..\NDD.Api.Mapeamento.Infra.Data\NDD.Api.Mapeamento.Infra.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="ConfigThrottling.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Desenvolvimento\middleware_Filipe.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="middleware.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="middleware.Release.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Roteamento\template-roteamento.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

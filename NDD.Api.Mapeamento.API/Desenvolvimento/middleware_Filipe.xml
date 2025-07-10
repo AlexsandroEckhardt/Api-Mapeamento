@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Middleware xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<General>
+		<AuditQueue>audit</AuditQueue>
+		<ErrorQueue>error</ErrorQueue>
+		<CreateQueues>true</CreateQueues>
+		<CriticalErrorTimeout>300</CriticalErrorTimeout>
+		<ShootdownOnCriticalError>false</ShootdownOnCriticalError>
+		<FileBaseRouting>file://D:\template-roteamento.xml</FileBaseRouting>
+	</General>
+  <Endpoint>
+    <Id>solicitacoes.api.template_id</Id>
+    <Name>solicitacoes.api.template</Name>
+    <Active>true</Active>
+    <BiDirectional>
+      <ProcessId>processamentopadrao</ProcessId>
+      <PersistenceId>persistenciapadrao_sql</PersistenceId>
+      <TransportId>transporterabbitid</TransportId>
+    </BiDirectional>
+  </Endpoint>
+  <Process Id="processamentopadrao">
+		<MaximumConcurrencyLevel>2</MaximumConcurrencyLevel>
+		<Audit>true</Audit>
+		<Recovery>
+			<ImmediateRetries>3</ImmediateRetries>
+			<DelayedRetries>
+				<NumberOfRetries>2</NumberOfRetries>
+				<IncreaseTimeout>10</IncreaseTimeout>
+			</DelayedRetries>
+		</Recovery>
+	</Process>
+  <Persistence Id="persistenciapadrao_sql">
+    <Memory>
+    </Memory>
+  </Persistence>
+  <Transport Id="transporterabbitid">
+    <RabbitMQ>
+      <ConnectionString>host=localhost:5672;username=guest;password=guest</ConnectionString>
+    </RabbitMQ>
+    <Transactions>
+      <TransportTransactionMode>ReceiveOnly</TransportTransactionMode>
+    </Transactions>
+  </Transport>
+</Middleware>

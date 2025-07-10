@@ -1,0 +1,32 @@
+{
+  "Politicas": [
+    {
+      "Nome": "Padrao",
+      "Regras": [
+        {
+          "Parametros": [
+          ],
+          "IgnorarParametros": true,
+          "ModoOperacao": 1,
+          "TempoDaJanela": 60,
+          "LimitePermitidoPorJanela": 1,
+          "QuantidadeSegmentos": 1
+        }
+      ]
+    },
+    {
+      "Nome": "PolicyFeaturePostAsync",
+      "Regras": [
+        {
+          "Parametros": [
+          ],
+          "IgnorarParametros": true,
+          "ModoOperacao": 1,
+          "TempoDaJanela": 60,
+          "LimitePermitidoPorJanela": 1,
+          "QuantidadeSegmentos": 1
+        }
+      ]
+    }
+  ]
+}
