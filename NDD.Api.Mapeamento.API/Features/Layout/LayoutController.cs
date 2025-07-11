@@ -36,11 +36,8 @@ namespace NDD.Api.Mapeamento.API.Features.Layout
         [ProducesResponseType(typeof(ExceptionPayload), StatusCodes.Status400BadRequest)]
         [HttpGet("ListarTodosLayouts")]
         [EnableRateLimiting("PolicyListarLayouts")]
-        public async Task<IActionResult> GetListarTodosLayouts([FromBody] LayoutCommand layoutCommand)
+        public async Task<IActionResult> GetListarTodosLayouts(LayoutCommand layoutCommand)
         {
-            if (layoutCommand != null)
-                layoutCommand.IdentificadorCliente = ObterIdentificadorCliente();
-
             return await Executar<LayoutCommand, LayoutDto, LayoutViewModel>(
                                   layoutCommand,
                                   () => "A requisição não pode ser nula",
@@ -59,11 +56,8 @@ namespace NDD.Api.Mapeamento.API.Features.Layout
         [ProducesResponseType(typeof(ExceptionPayload), StatusCodes.Status400BadRequest)]
         [HttpGet("ListarLayoutsDestino")]
         [EnableRateLimiting("PolicyFeatureListarLayoutsDestino")]
-        public async Task<IActionResult> FeatureGetListarLayoutsDestino([FromBody] LayoutCommand layoutCommand)
+        public async Task<IActionResult> FeatureGetListarLayoutsDestino(LayoutCommand layoutCommand)
         {
-            if (layoutCommand != null)
-                layoutCommand.IdentificadorCliente = ObterIdentificadorCliente();
-
             return await Executar<LayoutCommand, LayoutDto, LayoutViewModel>(
                                   layoutCommand,
                                   () => "A requisição não pode ser nula",
