@@ -11,23 +11,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="appsettings.json" />
-    <Content Remove="appsettings.Release.json" />
-    <Content Remove="Desenvolvimento\appsettings_Filipe.json" />
     <Content Remove="Serilogfile.json" />
     <Content Remove="Serilogfile.Release.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="appsettings.Release.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="appsettings.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Desenvolvimento\appsettings_Filipe.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Serilogfile.Release.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -73,22 +61,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="ConfigThrottling.json">
+    <Content Update="Desenvolvimento\appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Desenvolvimento\middleware_Filipe.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="middleware.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="middleware.Release.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Roteamento\template-roteamento.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

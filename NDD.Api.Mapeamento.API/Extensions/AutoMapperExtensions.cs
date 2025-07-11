@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 
-using NDD.Api.Mapeamento.API.Features.Feature;
-using NDD.Api.Mapeamento.Application.Features.NomeFeature;
+using NDD.Api.Mapeamento.API.Features.Layout;
+using NDD.Api.Mapeamento.Application.Features.Layout;
 
 using System.Diagnostics.CodeAnalysis;
 
@@ -14,8 +14,8 @@ namespace NDD.Api.Mapeamento.API.Extensions
         {
             var mapperConfig = new MapperConfiguration(mc =>
             {
-                mc.AddProfile(new FeatureApplicationMapper());
-                mc.AddProfile(new FeatureControllerMapper());
+                mc.AddProfile(new LayoutApplicationMapper());
+                //mc.AddProfile(new MapeamentoControllerMapper());
             });
 
             IMapper mapper = mapperConfig.CreateMapper();

@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 using NDD.Api.Mapeamento.Base.Configuracoes;
-using NDD.Api.Mapeamento.Domain.Features.NomeFeature.Repositorio;
+using NDD.Api.Mapeamento.Domain.Features.Layout.Repositorio;
 using NDD.Api.Mapeamento.Infra.Data.Contexts;
 using NDD.Api.Mapeamento.Infra.Data.Feature;
 using NDD.Space.Base.Extensions;
@@ -25,7 +25,7 @@ namespace NDD.Api.Mapeamento.Infra.Data
                 return new TemplateDbContext(options);
             });
 
-            services.AddTransient<IRepositorioNomeFeature, FeatureRepository>();
+            services.AddTransient<IRepositorioLayout, LayoutRepository>();
         }
     }
 }
