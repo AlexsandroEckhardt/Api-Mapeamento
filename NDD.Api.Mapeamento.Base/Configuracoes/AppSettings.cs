@@ -2,11 +2,15 @@
 {
     public class AppSettings
     {
-        public string ConnectionString { get; set; }
+        public string CaminhoArquivoLog { get; set; }
+        public string CaminhoArquivoMapeador { get; set; }
+        public string UsarMapeadorOuXSLT { get; set; }
     }
 
     public class AppSettingsConfiguracao
     {
-        public string ConnectionString { get; set; }
+        public string CaminhoArquivoLog { get; set; }
+        public string CaminhoArquivoMapeador { get; set; }
+        public string UsarMapeadorOuXSLT { get; set; }
     }
 }

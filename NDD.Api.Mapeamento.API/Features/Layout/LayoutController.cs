@@ -55,7 +55,7 @@ namespace NDD.Api.Mapeamento.API.Features.Layout
         [ProducesResponseType(typeof(LayoutViewModel), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ExceptionPayload), StatusCodes.Status400BadRequest)]
         [HttpGet("ListarLayoutsDestino")]
-        [EnableRateLimiting("PolicyFeatureListarLayoutsDestino")]
+        [EnableRateLimiting("PolicyListarLayoutsDestino")]
         public async Task<IActionResult> FeatureGetListarLayoutsDestino(LayoutCommand layoutCommand)
         {
             return await Executar<LayoutCommand, LayoutDto, LayoutViewModel>(

@@ -19,7 +19,7 @@ namespace NDD.Api.Mapeamento.Infra.Data
             services.AddScoped((ctx) =>
             {
                 var options = new DbContextOptionsBuilder<TemplateDbContext>()
-                                 .UseSqlServer(appSettings.ConnectionString,
+                                 .UseSqlServer(appSettings.CaminhoArquivoMapeador,
                                   opts => opts.CommandTimeout((int)TimeSpan.FromMinutes(10).TotalSeconds)).Options;
 
                 return new TemplateDbContext(options);

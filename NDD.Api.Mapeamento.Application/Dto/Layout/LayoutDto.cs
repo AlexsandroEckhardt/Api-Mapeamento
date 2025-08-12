@@ -7,6 +7,6 @@ namespace NDD.Api.Mapeamento.Application.Dto.Layout
     [ExcludeFromCodeCoverage]
     public class LayoutDto
     {
-        public RespostaDeRequisicao Resposta { get; set; }
+        public RespostaDeRequisicao TodosLayouts { get; set; }
     }
 }

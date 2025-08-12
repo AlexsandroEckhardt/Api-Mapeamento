@@ -1,9 +1,6 @@
 using FluentValidation;
-
 using MediatR;
-
 using NDD.Api.Mapeamento.Application.Dto.Layout;
-using NDD.Api.Mapeamento.Base.Configuracoes;
 using NDD.Space.Base.Domain;
 
 namespace NDD.Api.Mapeamento.Application.Features.Layout
@@ -18,8 +15,8 @@ namespace NDD.Api.Mapeamento.Application.Features.Layout
     {
         public DadosValidator()
         {
-            RuleFor(x => x.LayoutOrigem).NotNull().WithMessage("Campo obrigatório não informado")
-                                          .WithErrorCode("Layout de Origem deve ser informado!");
+            //RuleFor(x => x.LayoutOrigem).NotNull().WithMessage("Campo obrigatório não informado")
+                                         // .WithErrorCode("Layout de Origem deve ser informado!");
 
         }
     }
